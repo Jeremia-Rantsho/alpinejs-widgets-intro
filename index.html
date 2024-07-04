@@ -62,8 +62,9 @@
     </div>
 
     <div x-data="{ code: 'Dynamic Paragraph' }">
-        <div x-ref="sentence">I am a sentence</div>
-        <button @click="$refs.sentence.innerText = 'I just changed'">Change Sentence</button>
+        <button @click="$refs.sentence.innerText = 'Since you clicked button, I say the name is Diketso'">Change Sentence</button>
+        <div x-ref="sentence">I am Jeremia</div>
+        
     </div>
 
     <div x-data="{ socks: 'White' }">
@@ -77,7 +78,7 @@
         
     </div>
 
-    <div x-data="{ groceries: ['Milk', 'Eggs', 'Cheese'] }">
+    <div x-data="{ groceries: ['Fruits', 'Vegetables', 'Pork', 'Chicken', 'cosmetics'] }">
         <p>Groceries</p>
         <ul>
             <template x-for="item in groceries">

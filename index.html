@@ -66,14 +66,15 @@
         <button @click="$refs.sentence.innerText = 'I just changed'">Change Sentence</button>
     </div>
 
-    <div x-data="{ socks: 'blue' }">
+    <div x-data="{ socks: 'White' }">
+        <button @click="socks = 'green'">Change Socks</button>
         <template x-if="socks=='blue'">
             <p>My socks are blue</p>
         </template>
         <template x-if="socks=='green'">
             <p>My socks are green</p>
         </template>
-        <button @click="socks = 'green'">Change Sox</button>
+        
     </div>
 
     <div x-data="{ groceries: ['Milk', 'Eggs', 'Cheese'] }">

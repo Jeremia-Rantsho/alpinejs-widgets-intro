@@ -7,6 +7,11 @@ body{
     background-color: aqua;
 }
 
+h2, .theFunc{
+    text-align: center;
+
+}
+
 .btnMessage{
     display: flex;
     justify-items: auto;

@@ -11,95 +11,13 @@
 <body>
     <div class="container">
         <h1>Introduction to AlpineJs</h1>
-        <h2>Message widget</h2>
-        <hr>
+        <a class="inlineBtn" href="inlineAlpinejs.html">
+            <button class="inlineAlpineJs">Inline AlpineJS</button>
+        </a>
 
-        <div class="theFunc" x-data="Counter()">
-            <button x-on:click="count++;if(count > 5){count = 5;}">Increment</button>
-            <button @click="count--;if(count < 0){count = 0;}">Decrement</button>
-            <button @click="reset">Reset</button>
-            <h3 required min="1" max="5" :value="count" x-text="count"></h3>
-
-        </div>
-
-        <hr>
-
-        <div class="theFunc" x-data="{ message : '', enteredMessage : '' }">
-            <div x-text="message"></div>
-            <button x-on:click="message = enteredMessage">Show message</button>
-        </div>
-        <hr>
-
-        <div class="btnMessage" x-data="{ greet: 'Hello there,  AlpineJS is doing the things' }">
-            <button id="btnClick" @click="greet='used @click to change initial text'">Change Message</button>
-            <p x-text="greet"></p>
-
-        </div>
-
-        <hr>
-
-        <div class="myCounter" x-data="{count: 1}">
-            <button @click="count++">increment</button>
-            <button x-on:click="count--">decrement</button>
-            <p x-text="count"></p>
-
-        </div>
-        <hr>
-        <div class="theFunc" x-data="{ countdown: 60 }" x-init="setInterval(function(){
-                countdown--;
-             }, 1000);
-             ">
-            <h1 x-text="countdown"></h1>
-        </div>
-        <hr>
-        <div class="showMessage">
-            <div x-data="{ show: false }">
-                <button @click="show=!show">Default Show</button>
-                <div x-show="show">Hello</div>
-            </div>
-
-            <div x-data="{ show: false }">
-                <button @click="show=!show">Transition Show</button>
-                <div x-show.transition="show">Hello</div>
-            </div>
-        </div>
-        <hr>
-
-        <div class="theFunc" x-data="{ title: 'AlpineJS is Awesome' }">
-            <p x-text="title"></p>
-            <input type="text" x-model="title">
-        </div>
-        <hr>
-        <div class="theFunc" x-data="{ code: 'Dynamic Paragraph' }">
-            <div x-html="code"></div>
-        </div>
-        <hr>
-        <div class="theFunc" x-data="{ code: 'Dynamic Paragraph' }">
-            <button @click="$refs.sentence.innerText = 'Since you clicked button, I say the name is Diketso'">Change
-                Sentence</button>
-            <div x-ref="sentence">I am Jeremia</div>
-
-        </div>
-        <hr>
-        <div class="theFunc" x-data="{ socks: 'White' }">
-            <button @click="socks = 'green'">Change Socks</button>
-            <template x-if="socks=='blue'">
-                <p>My socks are blue</p>
-            </template>
-            <template x-if="socks=='green'">
-                <p>My socks are green</p>
-            </template>
-
-        </div>
-        <hr>
-        <div x-data="{ groceries: ['Fruits', 'Vegetables', 'Pork', 'Chicken', 'cosmetics'] }">
-            <p>Groceries</p>
-            <ul>
-                <template x-for="item in groceries">
-                    <li x-text="item"></li>
-                </template>
-            </ul>
-        </div>
+        <a href="externalAlpinejs.html">
+            <button class="externalAlpineJs">External AlpineJS</button>
+        </a>
 
     </div>
 

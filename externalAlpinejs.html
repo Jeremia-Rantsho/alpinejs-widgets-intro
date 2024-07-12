@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>External AlpineJs</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Introduction to AlpineJs using external file</h1>
+        <h2>Message widget</h2>
+
+        <hr>
+
+        <div class="theFunc" x-data="counter">
+            <button x-on:click="increment()">Increment</button>
+            <button @click="decrement()">Decrement</button>
+            <button @click="reset">Reset</button>
+            <h3 x-text="count"></h3>
+
+        </div>
+        <hr>
+    </div>
+
+    <script src="counter.js"></script>
+    <script src="index.js"></script>
+    <script src="//unpkg.com/alpinejs" defer></script>
+</body>
+
+</html>

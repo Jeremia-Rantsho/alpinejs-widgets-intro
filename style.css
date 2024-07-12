@@ -32,6 +32,17 @@ h2, .theFunc{
 }
 
 .myCounter button,
-.showMessage div{
+.showMessage div,
+.inlineBtn{
     margin-bottom: 5px;
 }
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+
